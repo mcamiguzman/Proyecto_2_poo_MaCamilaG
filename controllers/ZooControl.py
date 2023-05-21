@@ -10,23 +10,18 @@ class ZooController:
 
     def ejecutar_opcion(self, opcion):
         if opcion == 1:
-            try:
-                animal = self.vista.menu_crear_animal()
-                if animal:
-                    self.modelo1.addcrear_producto(producto)
-            except ValueError:
-                self.vista.mostrar_mensaje_error("Se presentó un error creando el producto")
+            print("Listo")
         if opcion == 2:
             try:
-                animal = self.vista.menu_crear_animal()
-                if animal:
-                    self.modelo1.crear_producto(producto)
+                habitad = self.vista.menu_crear_hanitad()
+                if habitad:
+                    self.modelo1.menu_crear_habitat(habitad)
             except ValueError:
                 self.vista.mostrar_mensaje_error("Se presentó un error creando el producto")
         if opcion == 3:
-            self.vista.listar_productos(self.modelo.animales)
+            self.vista.listar(self.modelo2.animales)
         if opcion == 4:
-            self.vista.menu_actualizar_producto(self.modelo.productos)
+            print("Listo")
 
 
     def aplicar_formato_tabla(self, productos):

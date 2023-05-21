@@ -44,7 +44,7 @@ class Zoo:
         if "opcion" in st.session_state:
             self.controlador.ejecutar_opcion(st.session_state["opcion"])
 
-    def listar_productos(self, animales):
+    def listar(self, animales):
         st.divider()
         with st.container():
             st.subheader("Listado de animales")
@@ -74,6 +74,7 @@ class Zoo:
                 raise ValueError("Numero con aceptable")
 
             nuevoHabitat = HabitadModel.Habitat(name, temperature, diet, max_capacity)
+            Zoo.habitats.append(nuevoHabitat)
             st.success("El Animal fue creado correctamente")
             return nuevoHabitat
 
@@ -90,15 +91,16 @@ class Zoo:
             boton_accion = st.button("Crear nuevo producto")
 
         if boton_accion:
-            if not id.isnumeric():
-                raise ValueError("El ID debe ser un valor numérico")
+            if habitat in Zoo.habitats:
+                nuevoAnimal = AnumalModel.Animal(name, species, age, diet, health_status, habitat)
+                it = Zoo.habitats[habitat]
+                #Zoo.Habitats[it]=Todo
 
-            nuevoAnimal = AnumalModel.Animal(name, species, age, diet, health_status, habitat)
             st.success("El producto fue creado correctamente")
             return nuevoAnimal
 
 
-    def obtener_informacion_producto(self, nombre, productos):
+    def obtener_informacion(self, nombre, productos):
         for producto in productos:
             if producto.nombre == nombre:
                 return producto

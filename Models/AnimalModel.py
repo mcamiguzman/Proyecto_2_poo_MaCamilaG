@@ -7,7 +7,6 @@ class Animal:
         self.health_status = health_status
         self.habitat = habitat
 
-    """
-    def mostrar(self):
-        print(f'Nombre: {self.nombre}')
-    """
+
+    def alimento(self,listAlimento):
+        print()
