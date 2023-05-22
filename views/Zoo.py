@@ -14,6 +14,11 @@ class Zoo:
         else:
             self.habitats = []
             st.session_state["habitats"] = []
+        if "animales" in st.session_state:
+             self.habitats = st.session_state["animales"]
+        else:
+            self.animales = []
+            st.session_state["animales"] = []
 
     def mostrar_menu(self):
         st.title("Bienvenido al Zoo")
@@ -55,6 +60,7 @@ class Zoo:
                     self.controlador.aplicar_formato_tabla(animales),
                     columns=["Nombre", "Edad", "Habiatat","Alimento"]
                 )
+
                 st.table(datos)
 
     def menu_crear_habitat(self):
@@ -98,6 +104,15 @@ class Zoo:
 
             st.success("El producto fue creado correctamente")
             return nuevoAnimal
+
+    def cambio_alimento(self):
+        # No se alcanzo a terminar la funcion
+        # Pero lo que se queria a hacer es buscar identificar el animal por el nombre, pedir el alimeto a cambiar como
+        # el cambio y llamar a funcion de la clase animal
+
+        for animal in Zoo.animales:
+            if animal.diet == "Carivoro":
+                animal.alimento()
 
 
     def obtener_informacion(self, nombre, productos):

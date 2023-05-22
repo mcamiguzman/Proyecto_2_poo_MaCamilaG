@@ -24,8 +24,8 @@ class ZooController:
             print("Listo")
 
 
-    def aplicar_formato_tabla(self, productos):
+    def aplicar_formato_tabla(self, animales):
         datos = []
-        for producto in productos:
-            datos.append([producto.id, producto.nombre, producto.descripcion, producto.precio])
+        for animal in animales:
+            datos.append([animal.id, animal.nombre, animal.descripcion, animal.precio])
         return datos

@@ -8,5 +8,13 @@ class Animal:
         self.habitat = habitat
 
 
-    def alimento(self,listAlimento):
-        print()
+    def alimento(self,listAlimento,alimentoCambio,alimetoDip):
+        if alimetoDip in listAlimento:
+            index = listAlimento.index(alimetoDip)
+            listAlimento[index] = alimentoCambio
+            return "Cambio exitoso"
+        else:
+            return "Hay probelmas"
+
+
+
