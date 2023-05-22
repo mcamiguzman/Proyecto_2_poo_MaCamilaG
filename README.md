@@ -6,6 +6,8 @@ Simular el funcionamiento de un zoológico. Permitiendo al usuario por medio de 
 * Añadir un nuevo animal.
 * Listar todos animales.
 * ermitir a los usuarios agregar y editar diferentes tipos de alimentos para los animales en el zoológico. 
-##### Se sugiere 
+* (No se alcanzo hacer mas funciones)
+##### Aun no se puede correr en otro dispositivo
 ## UML del desarrollo 
-El UML fue desarrollado en la plataforma web Miro y se puede observar en el siguiente enlace: 
+![](https://github.com/mcamiguzman/Proyecto_2_poo_MaCamilaG/blob/main/diagrama%20uml.png)
+- No se ha intentado correr en programa
